@@ -1,0 +1,19 @@
+📸 Drop your photos here!
+═══════════════════════════
+
+Rename your downloaded Instagram photos to match these names:
+
+  wedding-1.jpg      → Best wedding shot
+  wedding-2.jpg      → Bride & groom portrait
+  wedding-3.jpg      → Ceremony / traditional
+  prewedding-1.jpg   → Couple / romantic
+  portrait-1.jpg     → Individual / fashion
+  portrait-2.jpg     → Family / kids
+  portrait-3.jpg     → Creative / artistic
+  event-1.jpg        → Event / celebration
+  product-1.jpg      → Product / commercial
+  about-studio.jpg   → Photo of you/your team at work
+
+✅ Supported formats: .jpg, .jpeg, .webp, .png
+💡 Tip: Keep files under 500KB for fast loading
+🔄 Refresh the website after adding photos!
