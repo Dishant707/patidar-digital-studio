@@ -32,9 +32,26 @@ const contactInfo = [
 export default function Contact() {
     const [submitted, setSubmitted] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        const form = e.currentTarget
+        const formData = new FormData(form)
+        const name = formData.get('name') as string
+        const phone = formData.get('phone') as string
+        const service = formData.get('service') as string
+        const message = formData.get('message') as string
+
+        const whatsappMessage = encodeURIComponent(
+            `📸 *New Inquiry for Patidar Digital Studio*\n\n` +
+            `👤 *Name:* ${name}\n` +
+            `📞 *Phone:* ${phone}\n` +
+            `📷 *Service:* ${service}\n` +
+            (message ? `💬 *Message:* ${message}` : '')
+        )
+
         setSubmitted(true)
+        window.open(`https://wa.me/919893477769?text=${whatsappMessage}`, '_blank')
+        form.reset()
         setTimeout(() => setSubmitted(false), 5000)
     }
 
@@ -135,12 +152,12 @@ export default function Contact() {
                                 {submitted ? (
                                     <>
                                         <CheckCircle className="w-5 h-5" />
-                                        Message Sent!
+                                        Message Sent to WhatsApp!
                                     </>
                                 ) : (
                                     <>
                                         <Send className="w-5 h-5" />
-                                        Send Message
+                                        Send on WhatsApp
                                     </>
                                 )}
                             </button>
